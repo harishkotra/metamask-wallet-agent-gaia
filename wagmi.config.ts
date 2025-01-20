@@ -1,7 +1,8 @@
-import { createPublicClient, createWalletClient } from "viem";
-import { http, createConfig } from "wagmi";
-import { lineaSepolia } from "wagmi/chains";
-import { injected } from "wagmi/connectors";
+import { createPublicClient } from "viem";
+import { createWalletClient } from "viem";
+import { createConfig, http, cookieStorage, createStorage } from "wagmi";
+import { lineaSepolia, linea, mainnet } from "wagmi/chains";
+import { metaMask } from "wagmi/connectors";
 
 export const publicClient = createPublicClient({
   chain: lineaSepolia,
@@ -16,10 +17,18 @@ export const walletClient = createWalletClient({
   account: process.env.PRIVATE_KEY as `0x${string}`,
 });
 
-export const config = createConfig({
-  chains: [lineaSepolia],
-  connectors: [injected()],
-  transports: {
-    [lineaSepolia.id]: http(),
-  },
-});
+export function getConfig() {
+  return createConfig({
+    chains: [lineaSepolia, linea, mainnet],
+    connectors: [metaMask()],
+    ssr: true,
+    storage: createStorage({
+      storage: cookieStorage,
+    }),
+    transports: {
+      [lineaSepolia.id]: http(),
+      [linea.id]: http(),
+      [mainnet.id]: http(),
+    },
+  });
+}
