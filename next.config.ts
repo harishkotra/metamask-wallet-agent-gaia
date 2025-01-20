@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  env: {
+    INFURA_PROJECT_ID: process.env.INFURA_PROJECT_ID,
+    PRIVATE_KEY: process.env.PRIVATE_KEY,
+  },
 };
 
 export default nextConfig;
