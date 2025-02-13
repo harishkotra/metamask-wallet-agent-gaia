@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MetaMask Gaia Agent Starter
+
+## Overview
+
+The MetaMask Gaia Agent Starter is a Next.js project that integrates the GaiaNet AI platform with the MetaMask SDK. This project allows you to leverage advanced AI functionalities while utilizing MetaMask for secure blockchain interactions.
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+- Node.js (LTS version recommended)
+- npm, yarn, pnpm, or bun
+- For Gaia Node:
+    
+    
+    | System | Minimum Requirements |
+    | --- | --- |
+    | OSX with Apple Silicon (M1-M4 chip) | 16GB RAM (32GB recommended) |
+    | Ubuntu Linux 20.04 with Nvidia CUDA 12 SDK | 8GB VRAM on GPU |
+    | Azure/AWS | Nvidia T4 GPU Instance |
 
 ## Getting Started
 
-First, run the development server:
+### Next.js Project Setup
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/harishkotra/metamask-wallet-agent-gaia
+cd metamask-wallet-agent-gaia
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+
+1. Run the development server:
+
+```bash
+ pnpm dev
+
+```
+
+1. Open [http://localhost:3000](http://localhost:3000/) with your browser to see the result.
+
+### Setting Up the Gaia Node
+
+1. Download and install the Gaia Node:
+
+```bash
+curl -sSfL '<https://github.com/GaiaNet-AI/gaianet-node/releases/latest/download/install.sh>' | bash
+
+```
+
+1. Set up the environment path (use the command printed in your terminal):
+
+```bash
+source ...
+
+```
+
+1. Initialize your Gaia Node:
+
+```bash
+gaianet init
+
+```
+
+2. Start your Gaia Node:
+
+```bash
+gaianet start
+
+```
+
+3. Access your node using the provided public URL (e.g., [https://0xf63939431ee11267f4855a166e11cc44d24960c0.gaianet.xyz](https://0xf63939431ee11267f4855a166e11cc44d24960c0.gaianet.xyz/))
+4. To stop the node:
+
+```bash
+gaianet stop
+
+```
+
+**Here’s also a [video](https://youtu.be/LVYXtg39t6c?si=rz2n_zyxufk9EXsa) to help you to run your own gaia node.**
+
+
+## Ebvironment Variables
+
+### .env Variables
+
+Before starting the project, make sure to update the `.env` file with the following values:
+
+```bash
+# Infura API key for connecting to Ethereum networks
+INFURA_API_KEY=your_infura_api_key_here
+
+# Private key of the account to be used for deployments and transactions
+ACCOUNT_PRIVATE_KEY=your_account_private_key_here
+
+```
+
+## Project Structure
+
+The project uses Next.js App Router. You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+## Features
+
+- **Next.js 15**: Utilizes the latest version of Next.js for powerful full-stack capabilities.
+- **React Server Components**: Adds components without sending additional client-side JavaScript.
+- **Built-in Optimizations**: Automatic image, font, and script optimizations for improved UX and Core Web Vitals.
+- **Advanced Routing & Nested Layouts**: Creates routes using the file system, supporting advanced routing patterns and UI layouts.
+- **MetaMask Integration**: Secure blockchain interactions and wallet connectivity.
+- **GaiaNet AI Integration**: Access to advanced AI functionalities through the Gaia protocol.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
+- [MetaMask Documentation](https://docs.metamask.io/)
+- [GaiaNet AI Documentation](https://docs.gaianet.ai/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please feel free to submit a Pull Request.
