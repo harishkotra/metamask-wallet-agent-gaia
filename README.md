@@ -88,7 +88,7 @@ gaianet stop
 **Here’s also a [video](https://youtu.be/LVYXtg39t6c?si=rz2n_zyxufk9EXsa) to help you to run your own gaia node.**
 
 
-## Ebvironment Variables
+## Environment Variables
 
 ### .env Variables
 
