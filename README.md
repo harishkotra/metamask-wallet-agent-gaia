@@ -52,7 +52,7 @@ pnpm install
 1. Download and install the Gaia Node:
 
 ```bash
-curl -sSfL '<https://github.com/GaiaNet-AI/gaianet-node/releases/latest/download/install.sh>' | bash
+curl -sSfL https://github.com/GaiaNet-AI/gaianet-node/releases/latest/download/install.sh | bash
 
 ```
 
