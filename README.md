@@ -2,7 +2,7 @@
 
 ## Overview
 
-The MetaMask Gaia Agent Starter is a Next.js project that integrates the GaiaNet AI platform with the MetaMask SDK. This project allows you to leverage advanced AI functionalities while utilizing MetaMask for secure blockchain interactions.
+The MetaMask Gaia Agent Starter is a Next.js project that integrates the Gaia's AI inference framework with the MetaMask SDK. This project allows you to leverage advanced AI functionalities while utilizing MetaMask for secure blockchain interactions.
 
 ## Prerequisites
 
@@ -114,14 +114,14 @@ The project uses Next.js App Router. You can start editing the page by modifying
 - **Built-in Optimizations**: Automatic image, font, and script optimizations for improved UX and Core Web Vitals.
 - **Advanced Routing & Nested Layouts**: Creates routes using the file system, supporting advanced routing patterns and UI layouts.
 - **MetaMask Integration**: Secure blockchain interactions and wallet connectivity.
-- **GaiaNet AI Integration**: Access to advanced AI functionalities through the Gaia protocol.
+- **Gaia AI Integration**: Access to advanced AI functionalities through the Gaia protocol.
 
 ## Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Learn Next.js](https://nextjs.org/learn)
 - [MetaMask Documentation](https://docs.metamask.io/)
-- [GaiaNet AI Documentation](https://docs.gaianet.ai/)
+- [Gaia AI Documentation](https://docs.gaianet.ai/)
 
 ## Contributing
 
